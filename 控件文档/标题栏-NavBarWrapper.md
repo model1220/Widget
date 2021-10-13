@@ -7,6 +7,18 @@
 <div align="center">
 <img src="../images/标题栏/设计.png" height="150px" alt="图片说明" style="zoom:100%;">
 </div>
+> [UI规范](##2. UI规范)
+>   	[应用场景](###2.1 应用场景)
+>   [	组成](###2.2 组成)
+>   	[主题](###2.3 主题)
+>   	[UI设计](### 2.4 UI设计)
+> [使用说明](## 3. 使用说明)
+>   	[开发理念](### 3.1 开发理念)
+>   	[摘要](### 3.2 摘要)
+>    		[属性](#### 3.2.1 属性)
+>    		[api](#### 3.2.2 api)
+>   	[示例](### 3.3 示例)
+
 
 ## 2. UI规范
 
@@ -55,7 +67,9 @@
 
   > 当背景是深色图片或深色时，标题栏使用透明背景, 文案、图标按钮使用黑色
 
-  <img src="../images/标题栏/透明背景主题.png" height="200px" alt="标题栏" style="zoom:100%;" />
+  <div align="center">
+    <img src="../images/标题栏/透明背景主题.png" height="200px" alt="标题栏"  style="zoom:100%;" />
+  </div>
 
 ### 2.4 UI设计
 
@@ -103,7 +117,7 @@
 
 ### 3.2 摘要
 
-#### 3.2.1 属性摘要
+#### 3.2.1 属性
 
 | 属性          | 类型    | 作用               | 默认值     |
 | ------------- | ------- | ------------------ | ---------- |
@@ -116,7 +130,7 @@
 | withIcon2     | string  | 设置图标2内容      |            |
 | withAction    | string  | 设置响应性行为文案 |            |
 
-#### 3.2.2 api摘要
+#### 3.2.2 api
 
 ##### initText
 
@@ -209,4 +223,6 @@ baseNavBar.forceSpecialColor(getResources().getColor(R.color.mt_white));
 ((NavBarWrapper) findViewById(R.id.baseNavBar3)).getNavIcon2().setDotViewType(DotView.TYPE_DOT);((NavBarWrapper) findViewById(R.id.baseNavBar3)).getNavIcon2().updateDotView(true);
 ```
 
-<img src="../images/标题栏.png" alt="标题栏" style="zoom:20%;" />
+<div align="center">
+<img src="../images/标题栏.png" height="200px" alt="图片说明" style="zoom:100%;" >
+</div>
