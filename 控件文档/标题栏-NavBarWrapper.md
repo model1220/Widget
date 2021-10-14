@@ -2,7 +2,7 @@
 
 ## 1标题栏
 
-<b>`NavBarWrapper`</b>继承了ThemeConstraintLayout,对控件对标题栏进行布局和风格标准化,并支持带有角标提醒的图标
+<b>`NavBarWrapper`</b>继承了ThemeConstraintLayout,该控件对标题栏进行布局和风格标准化,并支持带有角标提醒的图标
 
 <div align="center">
 <img src="../images/标题栏/设计.png" height="150px" alt="图片说明" style="zoom:100%;">
@@ -10,20 +10,11 @@
 <img src="../images/标题栏/透明背景主题.png" height="150px" alt="图片说明" style="zoom:100%;">
 </div>
 
-
-> 
->
-> [UI规范](##2. UI规范)
-> 	[应用场景](###2.1应用场景)
-> [组成](###2.2 组成)
-> 	[主题](###2.3 主题)
-> 	[UI设计](### 2.4 UI设计)
-> [使用说明](## 3. 使用说明)
-> 	[开发理念](### 3.1 开发理念)
-> 	[摘要](### 3.2 摘要)
-> 		[属性](#### 3.2.1 属性)
-> 		[api](#### 3.2.2 api)
-> 	[示例](### 3.3 示例)
+> 支持xml中直接设置标题等内容
+> back键可以直接点击返回,无需再注册点击事件
+> 支持带角标的图标
+> 支持镜像语言
+> 支持透明背景主题
 
 ## 2UI设计
 
@@ -36,10 +27,11 @@
 标题栏由容器、左侧导航、标题、右侧操作、分割线组成
 
 <div align="center">
-<img src="../images/标题栏/组成1.png" height="150px" alt="图片说明" style="zoom:100%;">
-<img src="../images/标题栏/组成2.png" height="150px" alt="图片说明" style="zoom:100%;">
-<img src="../images/标题栏/组成3.png" height="150px" alt="图片说明" style="zoom:100%;">
+<img src="../images/标题栏/组成1.png" height="160px" alt="图片说明" style="zoom:100%;">
+<img src="../images/标题栏/组成2.png" height="160px" alt="图片说明" style="zoom:100%;">
+<img src="../images/标题栏/组成3.png" height="160px" alt="图片说明" style="zoom:100%;">
 </div>
+
 
 - ① ThemeConstraintLayout 容器
 - ② RippleThemeTextView 导航按钮: 返回 (`withBack`)
@@ -52,9 +44,10 @@
 
 右侧操作栏顺序(从左到右): 文字按钮 - 图标按钮1 - 图标按钮2 - 按钮
 
-<div align="center">
+<div align="left">
 <img src="../images/标题栏/组成4.png" height="150px" alt="图片说明" style="zoom:100%;">
 </div>
+
 
 ### 2.3主题
 
@@ -64,17 +57,16 @@
 
   > 标题栏内容颜色跟随app颜色模式变化
 
-+ 透明背景浅色主题
++ 透明背景主题
 
   > 当背景是深色图片或深色时，标题栏使用透明背景, 文案、图标按钮使用白色
+  >
+  > <div align="left">
+  >   <img src="../images/标题栏/透明背景主题.png" height="200px" alt="标题栏"  style="zoom:100%;" />
+  > </div>
 
-+ 透明背景深色主题
+  
 
-  > 当背景是深色图片或深色时，标题栏使用透明背景, 文案、图标按钮使用黑色
-
-  <div align="center">
-    <img src="../images/标题栏/透明背景主题.png" height="200px" alt="标题栏"  style="zoom:100%;" />
-  </div>
 
 ### 2.4标注
 
@@ -145,7 +137,7 @@ if (baseNavBar != null) {
 }
 ```
 
-在代码中更新指定TextView的内容,会根据不同主题设置不同内容颜色
+initText方法保证了在对TextView设置文本时,会根据不同主题设置对应的主题颜色.
 
 ##### forceSpecialColor
 
@@ -158,6 +150,8 @@ baseNavBar.forceSpecialColor(getResources().getColor(R.color.mt_white));
 ### 3.3示例
 
 + 标题栏-粉丝排行榜
+
+  粉丝排行榜页面采用了带返回键、主标题和图标的标题栏,布局如下:
 
 ```xml
 <mobi.mangatoon.widget.nav.NavBarWrapper
@@ -174,6 +168,8 @@ baseNavBar.forceSpecialColor(getResources().getColor(R.color.mt_white));
 </div>
 
 + widget-example
+
+  demo代码里展示了不同颜色模式下的布局及UI效果:
 
 ```xml
 <mobi.mangatoon.widget.nav.NavBarWrapper

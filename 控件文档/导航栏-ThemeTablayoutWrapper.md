@@ -1,24 +1,119 @@
-## 导航栏
+## 1导航栏
 
 <b>`ThemeTablayoutWrapper`</b>导航栏组件简介:
 
-进一步对[ThemeTablayout](https://gitlab.mangatoon.mobi/android/mangatoon-android-docs/blob/master/%E5%9F%BA%E7%A1%80%E6%8E%A7%E4%BB%B6%E6%96%87%E6%A1%A3/%E5%AF%BC%E8%88%AA%E6%A0%8F-ThemeTabLayout.md)进行封装,增加了右侧单/双图标支持、底部分割线等,,并进行了局部模糊处理.该控件用作最顶级导航栏.
+​	进一步对[ThemeTablayout](https://gitlab.mangatoon.mobi/android/mangatoon-android-docs/blob/master/%E5%9F%BA%E7%A1%80%E6%8E%A7%E4%BB%B6%E6%96%87%E6%A1%A3/%E5%AF%BC%E8%88%AA%E6%A0%8F-ThemeTabLayout.md)进行封装,增加了右侧单/双图标支持、底部分割线等,,并进行了局部模糊处理.该控件用作最顶级导航栏.
 
-## UI规范
+<div align="left">
+<img src="../images/导航栏/设计.png" height="160px" alt="图片说明" style="zoom:100%;">
+</div>
 
-### UI理念
+## 2UI设计
 
-### 应用场景
+### 2.1应用场景
 
-### 组成
+​	导航栏用于一级页面的顶部，容纳多个标签页的导航，标签页之间没有并列关系，也可以容纳图标按钮。目前用于MT小说页、MT发现页、NT发现页、AT发现页。导航栏固定在顶部，不会被滑出屏幕。
 
-- ① ThemeTabLayout
-- ② ThemeView 过渡蒙层
-- ③ NavTextView icon1 图标1
-- ② NavTextView icon2 图标2
-- ③ ThemeLineView 底部分割线
+### 2.2组成
 
-### UI设计
+导航栏由容器、选项、指示符、选项遮罩、右侧图标按钮(可选)、分割线组成,当右侧没有按钮图标时,不会显示选项遮罩.
+
+
+
+<div align="center">
+<img src="../images/导航栏/组成1.png" height="160px" alt="图片说明" style="zoom:100%;">
+<img src="../images/导航栏/组成2.png" height="160px" alt="图片说明" style="zoom:100%;">
+</div>
+
+- ① ThemeConstraintLayout 
+- ② TabTextView 选项 (ThemeTabLayout)
+- ③ TabIndicator  (ThemeTabLayout)
+- ④ 选项遮罩
+- ⑤ TabTextView 图标按钮1
+- ⑥ TabTextView 图标按钮2
+- ⑦ 底部分割线
+
+### 2.3主题
+
++ 默认主题
+
+> 标题栏内容颜色跟随app颜色模式变化
+
++ 透明背景主题:
+
+> 当背景是深色图片或深色时，导航栏使用透明背景,文案、指示符、图标按钮使用白色
+> <div align="left">
+<img src="../images/导航栏/透明背景.png" height="180px" alt="图片说明" style="zoom:100%;">
+</div>
+
+### 2.4标注
+
++ 容器
+> 高度44dp(不包含分割线)
+> <div align="left">
+<img src="../images/导航栏/标注1.png" height="180px" alt="图片说明" style="zoom:100%;">
+</div>
++ 选项文字
+> 1.选中选项文字：字体Roboto Medium，字号18，颜色Primary Text
+> 2.未选中选项文字：字体Roboto Regular，字号16，颜色Primary Text
+> 文字始终相对容器垂直居中
+>
+> <div align="left">
+> <img src="../images/导航栏/标注2.png" height="180px" alt="图片说明" style="zoom:100%;">
+> </div>
++ 指示符
+> 1.指示符20x3dp，圆角2dp，距离文字2dp，颜色主题色
+> <div align="left">
+<img src="../images/导航栏/标注3.png" height="180px" alt="图片说明" style="zoom:100%;">
+</div>
++ 过渡遮罩
+> 1.遮罩跟随右侧图标按钮出现，距离图标按钮8dp
+遮罩宽度40dp，选项列表透明度从左到右，透明度从0变为100
+> <div align="left">
+<img src="../images/导航栏/标注4.png" height="180px" alt="图片说明" style="zoom:100%;">
+</div>
++ 右侧图标按钮
+> 1.可以用图标表达清楚意思的通用性强的操作，
+可以使用iconfont图标
+iconfont字号24
+最多容纳两个图标按钮
+> <div align="left">
+<img src="../images/导航栏/标注5.png" height="180px" alt="图片说明" style="zoom:100%;">
+</div>
++ 角标(数字)
+> 红点和文字的对齐关系
+> <div align="left">
+<img src="../images/导航栏/标注6.png" height="180px" alt="图片说明" style="zoom:100%;">
+</div>
++ 角标(红点)
+> 红点和图标的对齐关系
+> <div align="left">
+<img src="../images/导航栏/标注7.png" height="180px" alt="图片说明" style="zoom:100%;">
+</div>
++ 分割线
+> 1.当导航栏和页面背景颜色相同，为了区分（也是为了配合GP推荐的要求），需要分割线
+分割线1px，颜色为Divider
+2.当导航栏和页面背景不同，不需要分割线
+> <div align="left">
+<img src="../images/导航栏/标注8.png" height="180px" alt="图片说明" style="zoom:100%;">
+</div>
++ 透明背景，白色文字
+> 1.文字颜色用Primary Light Text
+> 2.指示符用Primary Light Text
+> 3.4 图标用Primary Light Text
+> 5.不需要分割线
+>
+> <div align="left">
+> <img src="../images/导航栏/标注9.png" height="180px" alt="图片说明" style="zoom:100%;">
+> </div>
+
+### 2.5交互
+
++ 选项列表支持滑动
+> 1.当选项列表展示不全时，可以左右滑动
+> 2.当选项列表可以完全展示时，不需要滑动
++ 透明背景的场景下，向上滑动后，过渡为正常的背景(功能待定)
++ 左右滑动页面的空白部分，切换标签页
 
 ## 使用
 
@@ -99,6 +194,10 @@ private fun createTabMediator(): TabLayoutMediator? {
 
 + 导航栏-发现页
 
+  发现页导航栏使用了可以兼有底部分割线和两个图标按钮的可滑动的主标题类型,在xml中分别要对属性tabLayoutStyle,
+
+  iconType1,iconType2,withUnderLine,tabIconType进行设置.
+
  ``` xml
   <mobi.mangatoon.widget.tablayout.ThemeTabLayoutWrapper
     android:id="@+id/tabLayoutWrapper"
@@ -106,7 +205,7 @@ private fun createTabMediator(): TabLayoutMediator? {
     android:layout_height="wrap_content"
     app:tabLayoutStyle="title"
     app:iconType1="onlyIconText"
-    app:iconType2="with_num"
+    app:iconType1="with_num"
     app:withUnderLine="true"
     app:tabIconType="with_dot"
     app:layout_constraintTop_toTopOf="parent"
@@ -119,6 +218,8 @@ private fun createTabMediator(): TabLayoutMediator? {
 </div>
 
 + 导航栏-书柜
+
+  书柜页使用了兼有底部分割线和Tab带有角标(红点)的固定副标题类型,在xml中需要对tabLayoutStyle,withUnderLine,tabIconType属性设值.
 
 ```xml
 <mobi.mangatoon.widget.tablayout.ThemeTabLayoutWrapper
