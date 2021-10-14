@@ -1,7 +1,3 @@
-followPageAdapter = new UserFollowPageAdapter(this.getSupportFragmentManager(), userId, this);
-viewPager.setAdapter(followPageAdapter);
-tabLayout.setupWithViewPager(viewPager);
-
 ## 1导航栏
 
 <b>`ThemeTabLayout`</b>导航栏组件简介:
