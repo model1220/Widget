@@ -8,9 +8,11 @@
 
 <b>`TabTextView`</b>继承了ThemeConstraintLayout,用作显示带角标的文本容器.
 
-## UI规范
+<div align="center">
+<img src="../images/标题栏/标注5.png" height="150px" alt="图片说明" style="zoom:100%;">
+</div>
 
-### UI理念
+## UI规范
 
 ### 应用场景
 
@@ -18,9 +20,8 @@
 
 ### 组成
 
-- ① ThemeConstraintLayout
-- ② ThemeTextView(文本填充,默认字体大小24dp)
-- ③ 角标(可选, 参[属性摘要](####属性摘要)`dotType` )
+-  ThemeTextView(文本填充,默认字体大小24dp)
+-  角标(可选, 参[属性摘要](####属性摘要)`dotType` )
 
 ### UI设计
 
@@ -38,7 +39,7 @@
 
 ### 摘要
 
-#### 属性摘要
+#### 属性
 
 | 属性    | 类型   | 作用                                               | 默认值 |
 | ------- | ------ | -------------------------------------------------- | ------ |

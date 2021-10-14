@@ -1,27 +1,42 @@
 
 
-## 1. 标题栏
+## 1标题栏
 
 <b>`NavBarWrapper`</b>继承了ThemeConstraintLayout,对控件对标题栏进行布局和风格标准化,并支持带有角标提醒的图标
 
-<div align="center">
+=== "浅色模式"
+
+<div align="left">
 <img src="../images/标题栏/设计.png" height="150px" alt="图片说明" style="zoom:100%;">
 </div>
+
+=== "深色模式"
+
+<div align="left">
+<img src="../images/标题栏/深色模式.png" height="150px" alt="图片说明" style="zoom:100%;">
+</div>
+
+=== "透明背景主题"
+
+<div align="center">
+<img src="../images/标题栏/透明背景主题.png" height="150px" alt="图片说明" style="zoom:100%;">
+</div>
+
+> 
+>
 > [UI规范](##2. UI规范)
->   	[应用场景](###2.1 应用场景)
->   [	组成](###2.2 组成)
->   	[主题](###2.3 主题)
->   	[UI设计](### 2.4 UI设计)
+> 	[应用场景](###2.1应用场景)
+> [组成](###2.2 组成)
+> 	[主题](###2.3 主题)
+> 	[UI设计](### 2.4 UI设计)
 > [使用说明](## 3. 使用说明)
->   	[开发理念](### 3.1 开发理念)
->   	[摘要](### 3.2 摘要)
->    		[属性](#### 3.2.1 属性)
->    		[api](#### 3.2.2 api)
->   	[示例](### 3.3 示例)
+> 	[开发理念](### 3.1 开发理念)
+> 	[摘要](### 3.2 摘要)
+> 		[属性](#### 3.2.1 属性)
+> 		[api](#### 3.2.2 api)
+> 	[示例](### 3.3 示例)
 
->​	<font size="2">[UI规范](##UI规范)</font> 
-
-## UI规范
+## 2UI设计
 
 ### 2.1 应用场景
 
@@ -44,7 +59,7 @@
 - ⑤ NavTextView icon2  图标按钮2 (`withIcon2`), 支持角标提醒
 - ⑥ ThemeLineView 底部分割线 (`withNavLine`)
 - ⑦ ThemeTextView 胶囊按钮 (`withAction`) 
-- ⑧ ⑨ RippleThemeTextView 副标题 (`withSubTitle`)
+- ⑧ RippleThemeTextView 副标题(文字按钮) (`withSubTitle`)
 
 右侧操作栏顺序(从左到右): 文字按钮 - 图标按钮1 - 图标按钮2 - 按钮
 
@@ -52,7 +67,7 @@
 <img src="../images/标题栏/组成4.png" height="150px" alt="图片说明" style="zoom:100%;">
 </div>
 
-### 2.3 主题
+### 2.3主题
 
 标题栏有三种主题:
 
@@ -72,7 +87,7 @@
     <img src="../images/标题栏/透明背景主题.png" height="200px" alt="标题栏"  style="zoom:100%;" />
   </div>
 
-### 2.4 UI设计
+### 2.4标注
 
 [UI设计稿](https://www.figma.com/file/aagp881WpGyQ211QfFHR1k/MangaToon-Libraries-(New)?node-id=8208%3A53136)
 
@@ -96,7 +111,7 @@
 
 
 
-## 3. 使用说明
+## 3使用说明
 
 ### 3.1 开发理念
 
@@ -116,9 +131,9 @@
 >
 > 标题栏高度固定,如无特殊要求layout_width 使用<b>`match_parent`</b>, layout_height使用<b>`wrap_content`</b>
 
-### 3.2 摘要
+### 3.2摘要
 
-#### 3.2.1 属性
+#### 3.2.1属性
 
 | 属性          | 类型    | 作用               | 默认值     |
 | ------------- | ------- | ------------------ | ---------- |
@@ -131,7 +146,7 @@
 | withIcon2     | string  | 设置图标2内容      |            |
 | withAction    | string  | 设置响应性行为文案 |            |
 
-#### 3.2.2 api
+#### 3.2.2api
 
 ##### initText
 
@@ -151,7 +166,7 @@ if (baseNavBar != null) {
 baseNavBar.forceSpecialColor(getResources().getColor(R.color.mt_white));
 ```
 
-### 3.3 示例
+### 3.3示例
 
 + 标题栏-粉丝排行榜
 
