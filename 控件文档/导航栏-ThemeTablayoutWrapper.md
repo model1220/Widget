@@ -51,32 +51,27 @@
 + 容器
 > 高度44dp(不包含分割线)
 > <div align="left">
-<img src="../images/导航栏/标注1.png" height="180px" alt="图片说明" style="zoom:100%;">
-</div>
+> <img src="../images/导航栏/标注1.png" height="180px" alt="图片说明" style="zoom:100%;">
+> </div>
 + 选项文字
 > 1.选中选项文字：字体Roboto Medium，字号18，颜色Primary Text
 > 2.未选中选项文字：字体Roboto Regular，字号16，颜色Primary Text
-> 文字始终相对容器垂直居中
->
+> 3.文字始终相对容器垂直居中
 > <div align="left">
 > <img src="../images/导航栏/标注2.png" height="180px" alt="图片说明" style="zoom:100%;">
->  </div>
+> </div>
 + 指示符
 > 1.指示符20x3dp，圆角2dp，距离文字2dp，颜色主题色
 > <div align="left">
 > <img src="../images/导航栏/标注3.png" height="180px" alt="图片说明" style="zoom:100%;">
 > </div>
 + 过渡遮罩
-> 1.遮罩跟随右侧图标按钮出现，距离图标按钮8dp
-遮罩宽度40dp，选项列表透明度从左到右，透明度从0变为100
+> 1.遮罩跟随右侧图标按钮出现，距离图标按钮8dp,遮罩宽度40dp，选项列表透明度从左到右，透明度从0变为100
 > <div align="left">
 > <img src="../images/导航栏/标注4.png" height="180px" alt="图片说明" style="zoom:100%;">
 > </div>
 + 右侧图标按钮
-> 1.可以用图标表达清楚意思的通用性强的操作，
-可以使用iconfont图标
-iconfont字号24
-最多容纳两个图标按钮
+> 1.可以用图标表达清楚意思的通用性强的操作，可以使用iconfont图标,iconfont字号24,最多容纳两个图标按钮
 > <div align="left">
 > <img src="../images/导航栏/标注5.png" height="180px" alt="图片说明" style="zoom:100%;">
 > </div>
@@ -91,8 +86,7 @@ iconfont字号24
 > <img src="../images/导航栏/标注7.png" height="180px" alt="图片说明" style="zoom:100%;">
 > </div>
 + 分割线
-> 1.当导航栏和页面背景颜色相同，为了区分（也是为了配合GP推荐的要求），需要分割线
-分割线1px，颜色为Divider
+> 1.当导航栏和页面背景颜色相同，为了区分（也是为了配合GP推荐的要求),需要分割线,分割线1px，颜色为Divider
 2.当导航栏和页面背景不同，不需要分割线
 > <div align="left">
 > <img src="../images/导航栏/标注8.png" height="180px" alt="图片说明" style="zoom:100%;">
