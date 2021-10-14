@@ -4,23 +4,12 @@
 
 <b>`NavBarWrapper`</b>继承了ThemeConstraintLayout,对控件对标题栏进行布局和风格标准化,并支持带有角标提醒的图标
 
-=== "浅色模式"
-
-<div align="left">
-<img src="../images/标题栏/设计.png" height="150px" alt="图片说明" style="zoom:100%;">
-</div>
-
-=== "深色模式"
-
-<div align="left">
-<img src="../images/标题栏/深色模式.png" height="150px" alt="图片说明" style="zoom:100%;">
-</div>
-
-=== "透明背景主题"
-
 <div align="center">
+<img src="../images/标题栏/设计.png" height="150px" alt="图片说明" style="zoom:100%;">
+<img src="../images/标题栏/深色模式.png" height="150px" alt="图片说明" style="zoom:100%;">
 <img src="../images/标题栏/透明背景主题.png" height="150px" alt="图片说明" style="zoom:100%;">
 </div>
+
 
 > 
 >
