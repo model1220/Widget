@@ -60,43 +60,43 @@
 >
 > <div align="left">
 > <img src="../images/导航栏/标注2.png" height="180px" alt="图片说明" style="zoom:100%;">
-> </div>
+>  </div>
 + 指示符
 > 1.指示符20x3dp，圆角2dp，距离文字2dp，颜色主题色
 > <div align="left">
-<img src="../images/导航栏/标注3.png" height="180px" alt="图片说明" style="zoom:100%;">
-</div>
+> <img src="../images/导航栏/标注3.png" height="180px" alt="图片说明" style="zoom:100%;">
+> </div>
 + 过渡遮罩
 > 1.遮罩跟随右侧图标按钮出现，距离图标按钮8dp
 遮罩宽度40dp，选项列表透明度从左到右，透明度从0变为100
 > <div align="left">
-<img src="../images/导航栏/标注4.png" height="180px" alt="图片说明" style="zoom:100%;">
-</div>
+> <img src="../images/导航栏/标注4.png" height="180px" alt="图片说明" style="zoom:100%;">
+> </div>
 + 右侧图标按钮
 > 1.可以用图标表达清楚意思的通用性强的操作，
 可以使用iconfont图标
 iconfont字号24
 最多容纳两个图标按钮
 > <div align="left">
-<img src="../images/导航栏/标注5.png" height="180px" alt="图片说明" style="zoom:100%;">
-</div>
+> <img src="../images/导航栏/标注5.png" height="180px" alt="图片说明" style="zoom:100%;">
+> </div>
 + 角标(数字)
 > 红点和文字的对齐关系
 > <div align="left">
-<img src="../images/导航栏/标注6.png" height="180px" alt="图片说明" style="zoom:100%;">
-</div>
+> <img src="../images/导航栏/标注6.png" height="180px" alt="图片说明" style="zoom:100%;">
+> </div>
 + 角标(红点)
 > 红点和图标的对齐关系
 > <div align="left">
-<img src="../images/导航栏/标注7.png" height="180px" alt="图片说明" style="zoom:100%;">
-</div>
+> <img src="../images/导航栏/标注7.png" height="180px" alt="图片说明" style="zoom:100%;">
+> </div>
 + 分割线
 > 1.当导航栏和页面背景颜色相同，为了区分（也是为了配合GP推荐的要求），需要分割线
 分割线1px，颜色为Divider
 2.当导航栏和页面背景不同，不需要分割线
 > <div align="left">
-<img src="../images/导航栏/标注8.png" height="180px" alt="图片说明" style="zoom:100%;">
-</div>
+> <img src="../images/导航栏/标注8.png" height="180px" alt="图片说明" style="zoom:100%;">
+> </div>
 + 透明背景，白色文字
 > 1.文字颜色用Primary Light Text
 > 2.指示符用Primary Light Text
