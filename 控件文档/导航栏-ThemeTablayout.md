@@ -1,4 +1,20 @@
-## 1导航栏
+# ThemeTabLayout
+
+>[导航栏](#导航栏)
+>
+>[UI设计](#UI设计)  
+>​		[应用场景](#UI设计##应用场景)  
+>​		[组成](#UI设计##组成)  
+>​		[主题](#UI设计##主题)  
+>​		[标注](#UI设计##标注)  
+>​ 		[交互](#UI设计##交互)
+>
+>[使用](#使用)  
+>​         [开发理念](#使用##开发理念)  
+>​		[摘要](#使用##摘要)  
+>​		[代码示例](#使用##代码示例)
+
+# 导航栏
 
 <b>`ThemeTabLayout`</b>导航栏组件简介:
 封装了TabLayout,统一了Tablayout使用风格和避免自定义Tab等.
@@ -11,9 +27,9 @@
 > 支持带角标的Tab
 > 支持镜像语言
 
-## 2UI设计
+# UI设计
 
-### 2.1应用场景
+## 应用场景
 
 Tab栏用于容纳一个以上标签页，标签页之间一般属于并列关系
 
@@ -32,7 +48,7 @@ Tab栏用于容纳一个以上标签页，标签页之间一般属于并列关�
   > <div align="left">
   > <img src="../images/Tab栏/设计2.png" height="160px" alt="图片说明" style="zoom:100%;">
   > </div>
-### 2.2组成
+## 组成
 
 导航栏由容器、选项、指示符、选项遮罩、右侧图标按钮、分割线组成
 
@@ -45,7 +61,7 @@ Tab栏用于容纳一个以上标签页，标签页之间一般属于并列关�
 - ③ TabIndicator 指示符
 - ④ 底部分割线(暂无)
 
-### 2.3标注
+## 标注
 
 + 容器
 > 高度44dp(不包含分割线)
@@ -89,9 +105,9 @@ Tab栏用于容纳一个以上标签页，标签页之间一般属于并列关�
   > <img src="../images/Tab栏/交互.png" height="180px" alt="图片说明" style="zoom:100%;">
   > </div>
 
-## 2使用
+# 使用
 
-### 2.1开发理念
+## 开发理念
 
 该控件主要解决以下问题:
 
@@ -107,9 +123,9 @@ Tab栏用于容纳一个以上标签页，标签页之间一般属于并列关�
 
 开发者在使用过程中,不必再去关心customView、镜像等问题,只需关注业务内容即可.
 
-### 2.2摘要
+## 摘要
 
-#### 2.2.1属性
+### 属性
 
 | 属性              | 类型   | 作用                     |
 | ----------------- | ------ | ------------------------ |
@@ -124,9 +140,9 @@ Tab栏用于容纳一个以上标签页，标签页之间一般属于并列关�
 |            title             | boolean | 可滚动,tab指示器为宽度20dp且高度3dp半径1.5dp的圆角矩形(主题色); 未选中时字体16;选中时,字体大小18,颜色#CCCCCC(#333333) |
 | fixedSubtitle/scrollSubtitle | String  | 不可滚动/可滚动,,tab指示器为宽度与tab文本宽度一致且高度2dp半径4dp的圆角矩形(主题色); 未选中时字体14;选中时,字体大小14,颜色#CCCCCC(#333333) |
 
-#### 2.2.2api
+### api
 
-##### 自定义tab内部view(customView)
+#### 自定义tab内部view(customView)
 
 ThemeTabLayout内部实现了自定义的风格统一的Tab,因此无需再调用TabLayout的setCustomView()方法来实现自定义tab内部view.
 
@@ -138,7 +154,7 @@ customView是一个宽度为LayoutParams.WRAP_CONTENT,高度为30dp的[TabTextVi
 >
 > 支持角标设置.
 
-##### addOnTabSelectedListener
+#### addOnTabSelectedListener
 
   控件内部调用了addOnTabSelectedListener方法,实现了选中和未选中状态时不同导航栏风格的Tab属性设置,无特殊情况,开发者无需再对Tab进行属性修改.
 
@@ -163,7 +179,7 @@ mTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
 });
 ```
 
-##### updateDotView  更新角标状态
+#### updateDotView  更新角标状态
 
 调用updateDotView方法用来更新弱提醒状态(红点或数字)
 
@@ -174,7 +190,7 @@ FavoriteDbModel.getUpdatedCount(getContext()).doOnSuccess(updatedCount -> {
     }).subscribe();
 ```
 
-### 代码示例
+## 代码示例
 
 + 导航栏-用户关注
 

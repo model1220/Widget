@@ -1,6 +1,20 @@
+# NavBarWrapper
 
+>[导航栏](#导航栏)
+>
+>[UI设计](#UI设计)  
+>​		[应用场景](#UI设计##应用场景)  
+>​		[组成](#UI设计##组成)  
+>​		[主题](#UI设计##主题)  
+>​		[标注](#UI设计##标注)  
+>​ 		[交互](#UI设计##交互)
+>
+>[使用](#使用)  
+>​         [开发理念](#使用##开发理念)  
+>​		[摘要](#使用##摘要)  
+>​		[代码示例](#使用##代码示例)
 
-## 1标题栏
+# 标题栏
 
 <b>`NavBarWrapper`</b>继承了ThemeConstraintLayout,该控件对标题栏进行布局和风格标准化,并支持带有角标提醒的图标
 
@@ -16,13 +30,13 @@
 > 支持镜像语言
 > 支持透明背景主题
 
-## 2UI设计
+# UI设计
 
-### 2.1 应用场景
+## 应用场景
 
 标题栏用于页面的导航、展示页面标题、操作
 
-### 2.2 组成
+## 组成
 
 标题栏由容器、左侧导航、标题、右侧操作、分割线组成
 
@@ -49,7 +63,7 @@
 </div>
 
 
-### 2.3主题
+## 主题
 
 标题栏有三种主题:
 
@@ -68,7 +82,7 @@
   
 
 
-### 2.4标注
+## 标注
 
 [UI设计稿](https://www.figma.com/file/aagp881WpGyQ211QfFHR1k/MangaToon-Libraries-(New)?node-id=8208%3A53136)
 
@@ -92,9 +106,9 @@
 
 
 
-## 3使用说明
+# 使用说明
 
-### 3.1 开发理念
+## 开发理念
 
 该控件主要解决以下问题:
 
@@ -112,9 +126,9 @@
 >
 > 标题栏高度固定,如无特殊要求layout_width 使用<b>`match_parent`</b>, layout_height使用<b>`wrap_content`</b>
 
-### 3.2摘要
+## 摘要
 
-#### 3.2.1属性
+### 属性
 
 | 属性          | 类型    | 作用               | 默认值     |
 | ------------- | ------- | ------------------ | ---------- |
@@ -127,9 +141,9 @@
 | withIcon2     | string  | 设置图标2内容      |            |
 | withAction    | string  | 设置响应性行为文案 |            |
 
-#### 3.2.2api
+### api
 
-##### initText
+#### initText
 
 ```java
 if (baseNavBar != null) {
@@ -139,7 +153,7 @@ if (baseNavBar != null) {
 
 initText方法保证了在对TextView设置文本时,会根据不同主题设置对应的主题颜色.
 
-##### forceSpecialColor
+#### forceSpecialColor
 
 允许改变整个标题栏文本内容的颜色,不再跟随app颜色模式变化.
 
@@ -147,7 +161,7 @@ initText方法保证了在对TextView设置文本时,会根据不同主题设置
 baseNavBar.forceSpecialColor(getResources().getColor(R.color.mt_white));
 ```
 
-### 3.3示例
+## 示例
 
 + 标题栏-粉丝排行榜
 

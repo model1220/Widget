@@ -1,4 +1,20 @@
-## 1导航栏
+# ThemeTabLayoutWrapper
+
+>[导航栏](#导航栏)
+>
+>[UI设计](#UI设计)  
+>​		[应用场景](#UI设计##应用场景)  
+>​		[组成](#UI设计##组成)  
+>​		[主题](#UI设计##主题)  
+>​		[标注](#UI设计##标注)  
+>​ 		[交互](#UI设计##交互)
+>
+>[使用](#使用)  
+>​         [开发理念](#使用##开发理念)  
+>​		[摘要](#使用##摘要)  
+>​		[代码示例](#使用##代码示例)
+
+# 导航栏
 
 <b>`ThemeTablayoutWrapper`</b>导航栏组件简介:
 
@@ -7,14 +23,18 @@
 <div align="left">
 <img src="../images/导航栏/设计.png" height="160px" alt="图片说明" style="zoom:100%;">
 </div>
+<br>
 
-## 2UI设计
 
-### 2.1应用场景
+
+
+# UI设计
+
+## 应用场景
 
 ​	导航栏用于一级页面的顶部，容纳多个标签页的导航，标签页之间没有并列关系，也可以容纳图标按钮。目前用于MT小说页、MT发现页、NT发现页、AT发现页。导航栏固定在顶部，不会被滑出屏幕。
 
-### 2.2组成
+## 组成
 
 导航栏由容器、选项、指示符、选项遮罩、右侧图标按钮(可选)、分割线组成,当右侧没有按钮图标时,不会显示选项遮罩.
 
@@ -33,7 +53,7 @@
 - ⑥ TabTextView 图标按钮2
 - ⑦ 底部分割线
 
-### 2.3主题
+## 主题
 
 + 默认主题
 
@@ -46,7 +66,7 @@
 <img src="../images/导航栏/透明背景.png" height="180px" alt="图片说明" style="zoom:100%;">
 </div>
 
-### 2.4标注
+## 标注
 
 + 容器
 > 高度44dp(不包含分割线)
@@ -101,7 +121,7 @@
 > <img src="../images/导航栏/标注9.png" height="180px" alt="图片说明" style="zoom:100%;">
 > </div>
 
-### 2.5交互
+## 交互
 
 + 选项列表支持滑动
 > 1.当选项列表展示不全时，可以左右滑动
@@ -109,9 +129,9 @@
 + 透明背景的场景下，向上滑动后，过渡为正常的背景(功能待定)
 + 左右滑动页面的空白部分，切换标签页
 
-## 使用
+# 使用
 
-### 开发理念
+## 开发理念
 
 对ThemeTabLayout进行封装,增加UI装饰.
 
@@ -120,9 +140,9 @@
 1. 如无特殊要求layout_width 使用<b>`match_parent`</b>, layout_height使用<b>`wrap_content`</b>
 2. 根据需求来设置[属性](#### 属性)
 
-### 摘要
+## 摘要
 
-#### 属性
+### 属性
 
 | 属性           | 类型    | 作用                                   |
 | -------------- | ------- | -------------------------------------- |
@@ -132,9 +152,9 @@
 | iconType1      | enum    | icon1角标类型(红点/数字)               |
 | iconType2      | enum    | icon2 角标类型(红点/数字)              |
 
-#### api
+### api
 
-##### initIcon
+#### initIcon
 
 初始化指定位置的icon内容及设置点击事件
 
@@ -151,7 +171,7 @@ tabLayoutWrapper?.apply {
 }
 ```
 
-##### getIconView
+#### getIconView
 
 获取指定位置的icon
 
@@ -162,11 +182,11 @@ val msgController = NewFunctionMsgController(
   null)
 ```
 
-##### getThemeTabLayout
+#### getThemeTabLayout
 
 获取ThemeTabLayout,以对Tablayout进行操作
 
-##### getCustomView
+#### getCustomView
 
 获取指定tab的customView,可以进行更新角标状态等
 
@@ -184,7 +204,7 @@ private fun createTabMediator(): TabLayoutMediator? {
 }
 ```
 
-### 代码示例
+## 代码示例
 
 + 导航栏-发现页
 
