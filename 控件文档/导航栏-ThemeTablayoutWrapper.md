@@ -18,11 +18,14 @@
 
 <b>`ThemeTablayoutWrapper`</b>导航栏组件简介:
 
-​	进一步对[ThemeTablayout](https://gitlab.mangatoon.mobi/android/mangatoon-android-docs/blob/master/%E5%9F%BA%E7%A1%80%E6%8E%A7%E4%BB%B6%E6%96%87%E6%A1%A3/%E5%AF%BC%E8%88%AA%E6%A0%8F-ThemeTabLayout.md)进行封装,增加了右侧单/双图标支持、底部分割线等,,并进行了局部模糊处理.该控件用作最顶级导航栏.
+​	进一步对[ThemeTablayout](https://gitlab.mangatoon.mobi/android/mangatoon-android-docs/blob/master/%E5%9F%BA%E7%A1%80%E6%8E%A7%E4%BB%B6%E6%96%87%E6%A1%A3/%E5%AF%BC%E8%88%AA%E6%A0%8F-ThemeTabLayout.md)进行封装,增加了左侧单图标、右侧单/双图标支持、底部分割线等,,并进行了局部模糊处理.该控件用作最顶级导航栏.
 
-<div align="left">
+<div align="center">
 <img src="../images/导航栏/设计.png" height="160px" alt="图片说明" style="zoom:100%;">
+<img src="../images/Tab导航栏/设计.png" height="160px" alt="图片说明" style="zoom:100%;">
+<img src="../images/Tab栏/设计1.png" height="160px" alt="图片说明" style="zoom:100%;">
 </div>
+
 <br>
 
 
@@ -33,6 +36,8 @@
 ## 应用场景
 
 ​	导航栏用于一级页面的顶部，容纳多个标签页的导航，标签页之间没有并列关系，也可以容纳图标按钮。目前用于MT小说页、MT发现页、NT发现页、AT发现页。导航栏固定在顶部，不会被滑出屏幕。
+
+​	导航栏也用于两个tab和左右操作按钮并存的情况.
 
 ## 组成
 
@@ -58,6 +63,11 @@
 + 默认主题
 
 > 标题栏内容颜色跟随app颜色模式变化
+>
+> <div align="center">
+> <img src="../images/Tab栏/设计1.png" height="160px" alt="图片说明" style="zoom:100%;">
+> <img src="../images/Tab导航栏/深色模式.png" height="160px" alt="图片说明" style="zoom:100%;">
+> </div>
 
 + 透明背景主题:
 
@@ -70,13 +80,15 @@
 
 + 容器
 > 高度44dp(不包含分割线)
-> <div align="left">
+> <div align="center">
 > <img src="../images/导航栏/标注1.png" height="180px" alt="图片说明" style="zoom:100%;">
+> <img src="../images/Tab导航栏/标注1.png" height="180px" alt="图片说明" style="zoom:100%;">
 > </div>
 + 选项文字
 > 1.选中选项文字：字体Roboto Medium，字号18，颜色Primary Text
 > 2.未选中选项文字：字体Roboto Regular，字号16，颜色Primary Text
 > 3.文字始终相对容器垂直居中
+>
 > <div align="left">
 > <img src="../images/导航栏/标注2.png" height="180px" alt="图片说明" style="zoom:100%;">
 > </div>
@@ -90,10 +102,14 @@
 > <div align="left">
 > <img src="../images/导航栏/标注4.png" height="180px" alt="图片说明" style="zoom:100%;">
 > </div>
-+ 右侧图标按钮
-> 1.可以用图标表达清楚意思的通用性强的操作，可以使用iconfont图标,iconfont字号24,最多容纳两个图标按钮
-> <div align="left">
++ 图标按钮
+> 可以用图标表达清楚意思的通用性强的操作，可以使用iconfont图标,iconfont字号24
+>
+> 右侧最多容纳两个,左侧最多一个
+>
+> <div align="center">
 > <img src="../images/导航栏/标注5.png" height="180px" alt="图片说明" style="zoom:100%;">
+> <img src="../images/Tab导航栏/标注2.png" height="180px" alt="图片说明" style="zoom:100%;">
 > </div>
 + 角标(数字)
 > 红点和文字的对齐关系
@@ -107,9 +123,10 @@
 > </div>
 + 分割线
 > 1.当导航栏和页面背景颜色相同，为了区分（也是为了配合GP推荐的要求),需要分割线,分割线1px，颜色为Divider
-2.当导航栏和页面背景不同，不需要分割线
-> <div align="left">
+> 2.当导航栏和页面背景不同，不需要分割线
+> <div align="center">
 > <img src="../images/导航栏/标注8.png" height="180px" alt="图片说明" style="zoom:100%;">
+> <img src="../images/Tab导航栏/标注5.png" height="180px" alt="图片说明" style="zoom:100%;">
 > </div>
 + 透明背景，白色文字
 > 1.文字颜色用Primary Light Text

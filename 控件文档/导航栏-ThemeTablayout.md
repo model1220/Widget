@@ -95,7 +95,7 @@ Tab栏用于容纳一个以上标签页，标签页之间一般属于并列关�
 > <div align="left">
 > <img src="../images/Tab栏/标注5.png" height="180px" alt="图片说明" style="zoom:100%;">
 > </div>
-### 2.4交互
+### 交互
 
 + 左右滑动页面的空白部分，切换标签页
 
