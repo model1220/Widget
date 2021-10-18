@@ -33,7 +33,7 @@
 
 Tab栏用于容纳一个以上标签页，标签页之间一般属于并列关系
 
-+ 固定列数
++ 固定列数(由属性themeTabStyle=fixedSubtitle控制 )
 
   > 最多支持四列
   >
@@ -41,7 +41,7 @@ Tab栏用于容纳一个以上标签页，标签页之间一般属于并列关�
   > <img src="../images/Tab栏/设计1.png" height="160px" alt="图片说明" style="zoom:100%;">
   > </div>
 
-+ 滚动
++ 滚动(由属性themeTabStyle=scrollSubtitle控制 )
 
   > 当列数超过四列，或少于四列但文字很长时，使用滚动Tab栏
   >
@@ -69,10 +69,10 @@ Tab栏用于容纳一个以上标签页，标签页之间一般属于并列关�
 > <img src="../images/Tab栏/标注1.png" height="180px" alt="图片说明" style="zoom:100%;">
 > </div>
 + 选项
-> 1.在固定列数时，每一列的宽度=屏幕宽度/列数
-> 2.选中文字：字体Roboto Medium，字号14，颜色主题色
-> 3.指示符：宽度=文字+红点布局宽度，高度2dp，颜色主题色，和容器靠下对齐
-> 4.未选中文字：字体Roboto Regular，字号14，颜色Primary Text
+> 1.在固定列数时，每一列的宽度=屏幕宽度/列数  
+> 2.选中文字：字体Roboto Medium，字号14，颜色主题色  
+> 3.指示符：宽度=文字+红点布局宽度，高度2dp，颜色主题色，和容器靠下对齐  
+> 4.未选中文字：字体Roboto Regular，字号14，颜色Primary Text  
 >
 > <div align="left">
 > <img src="../images/Tab栏/标注2.png" height="180px" alt="图片说明" style="zoom:100%;">
@@ -127,18 +127,18 @@ Tab栏用于容纳一个以上标签页，标签页之间一般属于并列关�
 
 ### 属性
 
-| 属性              | 类型   | 作用                     |
-| ----------------- | ------ | ------------------------ |
-| themeTabStyle     | enum   | 导航栏风格               |
-| dotViewType       | enum   | Tab弱提醒风格(红点/数字) |
-| tabIndicatorColor | String | 指示器颜色               |
+| 属性              | 类型   | 作用                                  |
+| ----------------- | ------ | ------------------------------------- |
+| themeTabStyle     | enum   | 导航栏风格(详见ThemeTablayoutWrapper) |
+| dotViewType       | enum   | Tab弱提醒风格(红点/数字)              |
+| tabIndicatorColor | String | 指示器颜色                            |
 
 + 导航栏风格
 
-|        themeTabStyle         |  类型   | 特征                                                         |
-| :--------------------------: | :-----: | :----------------------------------------------------------- |
-|            title             | boolean | 可滚动,tab指示器为宽度20dp且高度3dp半径1.5dp的圆角矩形(主题色); 未选中时字体16;选中时,字体大小18,颜色#CCCCCC(#333333) |
-| fixedSubtitle/scrollSubtitle | String  | 不可滚动/可滚动,,tab指示器为宽度与tab文本宽度一致且高度2dp半径4dp的圆角矩形(主题色); 未选中时字体14;选中时,字体大小14,颜色#CCCCCC(#333333) |
+|        themeTabStyle         |  类型   | 特征                           |
+| :--------------------------: | :-----: | :----------------------------- |
+|            title             | boolean | title类型导航栏                |
+| fixedSubtitle/scrollSubtitle | String  | `固定列数导航栏`/ `滚动导航栏` |
 
 ### api
 

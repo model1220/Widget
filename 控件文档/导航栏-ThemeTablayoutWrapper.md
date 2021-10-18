@@ -85,9 +85,9 @@
 > <img src="../images/Tab导航栏/标注1.png" height="180px" alt="图片说明" style="zoom:100%;">
 > </div>
 + 选项文字
-> 1.选中选项文字：字体Roboto Medium，字号18，颜色Primary Text
-> 2.未选中选项文字：字体Roboto Regular，字号16，颜色Primary Text
-> 3.文字始终相对容器垂直居中
+> 1.选中选项文字：字体Roboto Medium，字号18，颜色Primary Text  
+> 2.未选中选项文字：字体Roboto Regular，字号16，颜色Primary Text  
+> 3.文字始终相对容器垂直居中  
 >
 > <div align="left">
 > <img src="../images/导航栏/标注2.png" height="180px" alt="图片说明" style="zoom:100%;">
@@ -122,17 +122,18 @@
 > <img src="../images/导航栏/标注7.png" height="180px" alt="图片说明" style="zoom:100%;">
 > </div>
 + 分割线
-> 1.当导航栏和页面背景颜色相同，为了区分（也是为了配合GP推荐的要求),需要分割线,分割线1px，颜色为Divider
-> 2.当导航栏和页面背景不同，不需要分割线
+> 1.当导航栏和页面背景颜色相同，为了区分（也是为了配合GP推荐的要求),需要分割线,分割线1px，颜色为Divider  
+> 2.当导航栏和页面背景不同，不需要分割线  
+>
 > <div align="center">
 > <img src="../images/导航栏/标注8.png" height="180px" alt="图片说明" style="zoom:100%;">
 > <img src="../images/Tab导航栏/标注5.png" height="180px" alt="图片说明" style="zoom:100%;">
 > </div>
 + 透明背景，白色文字
-> 1.文字颜色用Primary Light Text
-> 2.指示符用Primary Light Text
-> 3.4 图标用Primary Light Text
-> 5.不需要分割线
+> 1.文字颜色用Primary Light Text  
+> 2.指示符用Primary Light Text  
+> 3.4 图标用Primary Light Text  
+> 5.不需要分割线  
 >
 > <div align="left">
 > <img src="../images/导航栏/标注9.png" height="180px" alt="图片说明" style="zoom:100%;">
@@ -141,7 +142,7 @@
 ## 交互
 
 + 选项列表支持滑动
-> 1.当选项列表展示不全时，可以左右滑动
+> 1.当选项列表展示不全时，可以左右滑动  
 > 2.当选项列表可以完全展示时，不需要滑动
 + 透明背景的场景下，向上滑动后，过渡为正常的背景(功能待定)
 + 左右滑动页面的空白部分，切换标签页
@@ -152,7 +153,7 @@
 
 对ThemeTabLayout进行封装,增加UI装饰.
 
-如果UI对底部分割线或图标有需求的话,可以使用该控件,否则建议使用[ThemeTabLayout](链接)
+如果UI对底部分割线或图标有需求的话,可以使用该控件,否则建议使用[ThemeTabLayout](导航栏-ThemeTabLayout.md)
 
 1. 如无特殊要求layout_width 使用<b>`match_parent`</b>, layout_height使用<b>`wrap_content`</b>
 2. 根据需求来设置[属性](#### 属性)
