@@ -142,7 +142,7 @@ Tab栏用于容纳一个以上标签页，标签页之间一般属于并列关�
 
 ### api
 
-#### 自定义tab内部view(customView)
+#### `自定义tab内部view(customView)`
 
 ThemeTabLayout内部实现了自定义的风格统一的Tab,因此无需再调用TabLayout的setCustomView()方法来实现自定义tab内部view.
 
@@ -154,7 +154,7 @@ customView是一个宽度为LayoutParams.WRAP_CONTENT,高度为30dp的[TabTextVi
 >
 > 支持角标设置.
 
-#### addOnTabSelectedListener
+#### `addOnTabSelectedListener`
 
   控件内部调用了addOnTabSelectedListener方法,实现了选中和未选中状态时不同导航栏风格的Tab属性设置,无特殊情况,开发者无需再对Tab进行属性修改.
 
@@ -179,7 +179,7 @@ mTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
 });
 ```
 
-#### updateDotView  更新角标状态
+#### `updateDotView`  更新角标状态
 
 调用updateDotView方法用来更新弱提醒状态(红点或数字)
 

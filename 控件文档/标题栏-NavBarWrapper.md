@@ -143,7 +143,7 @@
 
 ### api
 
-#### initText
+#### `initText`
 
 ```java
 if (baseNavBar != null) {
@@ -153,7 +153,7 @@ if (baseNavBar != null) {
 
 initText方法保证了在对TextView设置文本时,会根据不同主题设置对应的主题颜色.
 
-#### forceSpecialColor
+#### `forceSpecialColor`
 
 允许改变整个标题栏文本内容的颜色,不再跟随app颜色模式变化.
 

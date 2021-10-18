@@ -57,15 +57,15 @@
 
 ###  api
 
-#### getTextView
+#### `getTextView`
 
 获取TextView
 
-#### setDotViewType
+#### `setDotViewType`
 
 设置角标类型
 
-#### upDateDotView
+#### `upDateDotView`
 
 更新角标状态
 

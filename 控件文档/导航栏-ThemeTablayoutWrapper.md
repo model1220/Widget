@@ -172,7 +172,7 @@
 
 ### api
 
-#### initIcon
+#### `initIcon`
 
 初始化指定位置的icon内容及设置点击事件
 
@@ -189,7 +189,7 @@ tabLayoutWrapper?.apply {
 }
 ```
 
-#### getIconView
+#### `getIconView`
 
 获取指定位置的icon
 
@@ -200,11 +200,11 @@ val msgController = NewFunctionMsgController(
   null)
 ```
 
-#### getThemeTabLayout
+#### `getThemeTabLayout`
 
 获取ThemeTabLayout,以对Tablayout进行操作
 
-#### getCustomView
+#### `getCustomView`
 
 获取指定tab的customView,可以进行更新角标状态等
 
