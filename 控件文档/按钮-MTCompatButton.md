@@ -1,6 +1,6 @@
-# ThemeTabLayoutWrapper
+# MTCompatButton
 
->[导航栏](#导航栏)
+>[按钮](#按钮)
 >
 >[UI设计](#UI设计)  
 >​		[应用场景](#UI设计##应用场景)  
@@ -14,9 +14,9 @@
 >​		[摘要](#使用##摘要)  
 >​		[代码示例](#使用##代码示例)
 
-# 导航栏
+# 按钮
 
-<b>`ThemeTablayoutWrapper`</b>导航栏组件简介:
+<b>`MTCompatButton`</b>导航栏组件简介:
 
 ​	进一步对[ThemeTablayout](https://gitlab.mangatoon.mobi/android/mangatoon-android-docs/blob/master/%E5%9F%BA%E7%A1%80%E6%8E%A7%E4%BB%B6%E6%96%87%E6%A1%A3/%E5%AF%BC%E8%88%AA%E6%A0%8F-ThemeTabLayout.md)进行封装,增加了左侧单图标、右侧单/双图标支持、底部分割线等,,并进行了局部模糊处理.该控件用作最顶级导航栏.
 
@@ -35,7 +35,23 @@
 
 ## 应用场景
 
-​	导航栏用于一级页面的顶部，容纳多个标签页的导航，标签页之间没有并列关系，也可以容纳图标按钮。目前用于MT小说页、MT发现页、NT发现页、AT发现页。导航栏固定在顶部，不会被滑出屏幕。
+​	按钮按功能分为四种:
+
++ 主要按钮(大)
+
+  > 用于
+
++ 次要按钮(大)
+
+  > 用于
+
++ 主要按钮(小)
+
+  > 用于
+
++ 描边按钮(小)
+
+  > 用于
 
 ​	导航栏也用于两个tab和左右操作按钮并存的情况.
 
@@ -151,23 +167,22 @@
 
 ## 开发理念
 
-对ThemeTabLayout进行封装,增加UI装饰.
+根据应用于不同场景button的UI,规范了5种style,每种style对布局、文字、背景进行标准化.
 
-如果UI对底部分割线或图标有需求的话,可以使用该控件,否则建议使用[ThemeTabLayout](导航栏-ThemeTabLayout.md)
-
-1. 如无特殊要求layout_width 使用<b>`match_parent`</b>, layout_height使用<b>`wrap_content`</b>
+开发过程中,只需设置style即可获取所需的button类型.layout_width按需求场景进行设置.
 
 ## 摘要
 
 ### 属性
 
-| 属性           | 类型    | 作用                                   |
-| -------------- | ------- | -------------------------------------- |
-| tabLayoutStyle | enum    | 导航栏风格                             |
-| withUnderLine  | boolean | 是否显示底部分割线                     |
-| tabIconType    | enum    | ThemeTabLayout的Tab角标类型(红点/数字) |
-| iconType1      | enum    | icon1角标类型(红点/数字)               |
-| iconType2      | enum    | icon2 角标类型(红点/数字)              |
+| style                           | 类型               | 作用                                   |
+| ------------------------------- | ------------------ | -------------------------------------- |
+| MangatoonBtnBig.Primary         | 主要按钮(大)       | 导航栏风格                             |
+| MangatoonBtnBig.Secondary       | 次要按钮(大)       | 是否显示底部分割线                     |
+| MangatoonBtnSmall.Primary       | 主题色主要按钮(小) | ThemeTabLayout的Tab角标类型(红点/数字) |
+| MangatoonBtnSmall.PrimaryOrange | 橙色主要按钮(小)   | icon1角标类型(红点/数字)               |
+| MangatoonBtnSmall.PrimaryBlue   | 蓝色主要按钮(小)   | icon2 角标类型(红点/数字)              |
+| MangatoonBtnSmall.Stroke        | 描边按钮(小)       |                                        |
 
 ### api
 
