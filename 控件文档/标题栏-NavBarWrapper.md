@@ -1,49 +1,55 @@
-# NavBarWrapper
+##### <font color='#999999'> 通用组件</font>
 
->[导航栏](#导航栏)
->
->[UI设计](#UI设计)  
->​		[应用场景](#UI设计##应用场景)  
->​		[组成](#UI设计##组成)  
->​		[主题](#UI设计##主题)  
->​		[标注](#UI设计##标注)  
->​ 		[交互](#UI设计##交互)
->
->[使用](#使用)  
->​         [开发理念](#使用##开发理念)  
->​		[摘要](#使用##摘要)  
->​		[代码示例](#使用##代码示例)
+# C01 标题栏
 
-# 标题栏
+
+
+------
 
 <b>`NavBarWrapper`</b>继承了ThemeConstraintLayout,该控件对标题栏进行布局和风格标准化,并支持带有角标提醒的图标
 
-<div align="center">
-<img src="../images/标题栏/设计.png" height="150px" alt="图片说明" style="zoom:100%;">
-<img src="../images/标题栏/深色模式.png" height="150px" alt="图片说明" style="zoom:100%;">
-<img src="../images/标题栏/透明背景主题.png" height="150px" alt="图片说明" style="zoom:100%;">
+------
+
+
+
+## 设计
+
+<div align="left">
+<img src="../images/标题栏/设计.png" height="400px" alt="图片说明" style="zoom:100%;">
 </div>
 
-> 支持xml中直接设置标题等内容
-> back键可以直接点击返回,无需再注册点击事件
-> 支持带角标的图标
-> 支持镜像语言
-> 支持透明背景主题
 
-# UI设计
+
+------
+
+
 
 ## 应用场景
 
 标题栏用于页面的导航、展示页面标题、操作
 
+
+
+------
+
+
+
 ## 组成
 
 标题栏由容器、左侧导航、标题、右侧操作、分割线组成
 
-<div align="center">
-<img src="../images/标题栏/组成1.png" height="160px" alt="图片说明" style="zoom:100%;">
-<img src="../images/标题栏/组成2.png" height="160px" alt="图片说明" style="zoom:100%;">
-<img src="../images/标题栏/组成3.png" height="160px" alt="图片说明" style="zoom:100%;">
+
+
+<div align="left">
+<img src="../images/标题栏/组成1.png" height="300px" alt="图片说明" style="zoom:100%;">
+</div>
+
+<div align="left">
+<img src="../images/标题栏/组成2.png" height="300px" alt="图片说明" style="zoom:100%;">
+</div>
+
+<div align="left">
+<img src="../images/标题栏/组成3.png" height="300px" alt="图片说明" style="zoom:100%;">
 </div>
 
 
@@ -56,57 +62,170 @@
 - ⑦ ThemeTextView 胶囊按钮 (`withAction`) 
 - ⑧ RippleThemeTextView 副标题(文字按钮) (`withSubTitle`)
 
+
+
 右侧操作栏顺序(从左到右): 文字按钮 - 图标按钮1 - 图标按钮2 - 按钮
 
 <div align="left">
-<img src="../images/标题栏/组成4.png" height="150px" alt="图片说明" style="zoom:100%;">
+<img src="../images/标题栏/组成4.png" height="300px" alt="图片说明" style="zoom:100%;">
 </div>
 
 
-## 主题
 
-标题栏有三种主题:
+------
 
-+ 默认主题
 
-  > 标题栏内容颜色跟随app颜色模式变化
 
-+ 透明背景主题
+## 深色模式
 
-  > 当背景是深色图片或深色时，标题栏使用透明背景, 文案、图标按钮使用白色
-  >
-  > <div align="left">
-  >   <img src="../images/标题栏/透明背景主题.png" height="200px" alt="标题栏"  style="zoom:100%;" />
-  > </div>
+标题栏内容颜色跟随app颜色模式（正常模式/深色模式）变化
 
-  
+<div align="left">
+<img src="../images/标题栏/深色模式.png" height="400px" alt="图片说明" style="zoom:100%;">
+</div>
+
+
+------
+
+
+
+## 透明容器背景
+
+在固定的深色背景/图片下，使用透明容器背景，前景的元素都用白色
+
+<div align="left">
+<img src="../images/标题栏/透明背景主题.png" height="400px" alt="图片说明" style="zoom:100%;">
+</div>
+
+
+------
+
 
 
 ## 标注
 
-[UI设计稿](https://www.figma.com/file/aagp881WpGyQ211QfFHR1k/MangaToon-Libraries-(New)?node-id=8208%3A53136)
+<div align="left">
+<img src="../images/标题栏/标注1.png" height="300px" alt="图片说明" style="zoom:100%;">
+</div>
+#### 容器
 
-<div align="center">
-<img src="../images/标题栏/标注1.png" height="150px" alt="图片说明" style="zoom:100%;">
-<img src="../images/标题栏/标注2.png" height="150px" alt="图片说明" style="zoom:100%;">
-<img src="../images/标题栏/标注3.png" height="150px" alt="图片说明" style="zoom:100%;">
+① 高度44dp(不包含分割线)
+
+
+
+<div align="left">
+<img src="../images/标题栏/标注2.png" height="300px" alt="图片说明" style="zoom:100%;">
 </div>
 
-<div align="center">
-<img src="../images/标题栏/标注4.png" height="150px" alt="图片说明" style="zoom:100%;">
-<img src="../images/标题栏/标注5.png" height="150px" alt="图片说明" style="zoom:100%;">
-<img src="../images/标题栏/标注6.png" height="150px" alt="图片说明" style="zoom:100%;">
+#### 左侧图标
+
+① 左侧导航使用iconfont，字号24，颜色color_text_primary
+
+
+
+<div align="left">
+<img src="../images/标题栏/标注3.png" height="300px" alt="图片说明" style="zoom:100%;">
 </div>
 
-<div align="center">
-<img src="../images/标题栏/标注7.png" height="150px" alt="图片说明" style="zoom:100%;">
-<img src="../images/标题栏/标注8.png" height="150px" alt="图片说明" style="zoom:100%;">
-<img src="../images/标题栏/标注9.png" height="150px" alt="图片说明" style="zoom:100%;">
+#### 标题
+
+① 标题字号18，字体Roboto Medium，始终居中
+② 标题文字只展示一行，距离左右两边按钮的最小距离16dp 当文字过长时，省略截断
+
+
+
+<div align="left">
+<img src="../images/标题栏/标注4.png" height="300px" alt="图片说明" style="zoom:100%;">
 </div>
+
+#### 右侧图标
+
+① 可以用图标表达清楚意思的通用性强的操作，可以使用iconfont图标，iconfont字号24
+
+
+
+<div align="left">
+<img src="../images/标题栏/标注5.png" height="300px" alt="图片说明" style="zoom:100%;">
+</div>
+
+#### 右侧图标红点提示
+
+
+
+<div align="left">
+<img src="../images/标题栏/标注6.png" height="300px" alt="图片说明" style="zoom:100%;">
+</div>
+
+#### 右侧按钮
+
+① 需要强调的操作并导致重要结果的操作，如【发布】
+
+
+
+<div align="left">
+<img src="../images/标题栏/标注7.png" height="300px" alt="图片说明" style="zoom:100%;">
+</div>
+
+#### 右侧文字按钮
+
+① 图标无法表达清楚意思，又没有重要到需要用按钮时，使用文字按钮
+② 需要强调的用高亮文字
+
+
+
+<div align="left">
+<img src="../images/标题栏/标注8.png" height="300px" alt="图片说明" style="zoom:100%;">
+</div>
+
+#### 分割线
+
+① 当标题栏和页面背景颜色相同，为了区分（也是为了配合GP推荐的要求），需要分割线
+分割线1px
+② 当标题栏和页面背景不同，不需要分割线
+
+
+
+<div align="left">
+<img src="../images/标题栏/标注9.png" height="300px" alt="图片说明" style="zoom:100%;">
+</div>
+
+#### 透明背景样式
+
+① ② ③ 在深色背景下的标题栏，容器背景为透明，
+前景的左侧按钮、标题、右侧文字按钮、
+右侧图标按钮都需要投影，避免和背景没有区分开
+投影参数：向下1dp，大小2dp，颜色20%Black
+② 这种场景下，不需要分割线
+
+##### <font color='#FF4545'> PS：滑动屏幕时，需要切换到非透明背景的标题栏</font>
+
+
+
+
+
+------
+
+设计稿地址：[UI设计稿](https://www.figma.com/file/aagp881WpGyQ211QfFHR1k/MangaToon-Libraries-(New)?node-id=8208%3A53136)
+
+------
+
+
+
+
 
 
 
 # 使用说明
+
+
+
+> 支持xml中直接设置标题等内容
+> back键可以直接点击返回,无需再注册点击事件
+> 支持带角标的图标
+> 支持镜像语言
+> 支持透明背景主题
+
+
 
 ## 开发理念
 
@@ -125,6 +244,8 @@
 > 如果直接应用在BaseFragmentActivity中, android:id应该使用<b>`baseNavBar`</b>,无需再在子Activity中再次索引该id
 >
 > 标题栏高度固定,如无特殊要求layout_width 使用<b>`match_parent`</b>, layout_height使用<b>`wrap_content`</b>
+
+
 
 ## 摘要
 
