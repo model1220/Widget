@@ -1,4 +1,8 @@
-##### <font color='#999999'> 通用组件</font>
+##### <font color='#999999'>
+
+
+
+#####  通用组件</font>
 
 # C01 标题栏
 
@@ -43,6 +47,7 @@
 <div align="left">
 <img src="../images/标题栏/组成1.png" height="300px" alt="图片说明" style="zoom:100%;">
 </div>
+
 
 <div align="left">
 <img src="../images/标题栏/组成2.png" height="300px" alt="图片说明" style="zoom:100%;">
@@ -104,94 +109,90 @@
 
 ## 标注
 
+#### 容器
+
 <div align="left">
 <img src="../images/标题栏/标注1.png" height="300px" alt="图片说明" style="zoom:100%;">
 </div>
-#### 容器
-
 ① 高度44dp(不包含分割线)
 
-
-
+-----
+#### 左侧导航
 <div align="left">
 <img src="../images/标题栏/标注2.png" height="300px" alt="图片说明" style="zoom:100%;">
 </div>
 
-#### 左侧图标
+① [左侧导航](#使用说明##摘要)使用iconfont，字号24，颜色color_text_primary
 
-① 左侧导航使用iconfont，字号24，颜色color_text_primary
-
-
-
+-----
+#### 标题
 <div align="left">
 <img src="../images/标题栏/标注3.png" height="300px" alt="图片说明" style="zoom:100%;">
 </div>
 
-#### 标题
-
-① 标题字号18，字体Roboto Medium，始终居中
+① [标题](#使用说明##摘要)字号18，字体Roboto Medium，始终居中
 ② 标题文字只展示一行，距离左右两边按钮的最小距离16dp 当文字过长时，省略截断
 
+-----
 
-
+#### 右侧图标
 <div align="left">
 <img src="../images/标题栏/标注4.png" height="300px" alt="图片说明" style="zoom:100%;">
 </div>
 
-#### 右侧图标
 
-① 可以用图标表达清楚意思的通用性强的操作，可以使用iconfont图标，iconfont字号24
+① [右侧图标](#使用说明##摘要)可以用图标表达清楚意思的通用性强的操作，可以使用iconfont图标，iconfont字号24
 
-
-
+-----
+#### 右侧图标红点提示
 <div align="left">
 <img src="../images/标题栏/标注5.png" height="300px" alt="图片说明" style="zoom:100%;">
 </div>
 
-#### 右侧图标红点提示
+-----
 
-
+#### 右侧按钮
 
 <div align="left">
 <img src="../images/标题栏/标注6.png" height="300px" alt="图片说明" style="zoom:100%;">
 </div>
 
-#### 右侧按钮
-
-① 需要强调的操作并导致重要结果的操作，如【发布】
 
 
+① [右侧按钮](#使用说明##摘要)需要强调的操作并导致重要结果的操作，如【发布】
 
+-----
+
+#### 右侧文字按钮
 <div align="left">
 <img src="../images/标题栏/标注7.png" height="300px" alt="图片说明" style="zoom:100%;">
 </div>
 
-#### 右侧文字按钮
 
-① 图标无法表达清楚意思，又没有重要到需要用按钮时，使用文字按钮
+① 图标无法表达清楚意思，又没有重要到需要用按钮时，使用[右侧文字按钮](#使用说明##摘要)
 ② 需要强调的用高亮文字
 
+-----
 
-
+#### 分割线
 <div align="left">
 <img src="../images/标题栏/标注8.png" height="300px" alt="图片说明" style="zoom:100%;">
 </div>
 
-#### 分割线
 
-① 当标题栏和页面背景颜色相同，为了区分（也是为了配合GP推荐的要求），需要分割线
+
+① 当标题栏和页面背景颜色相同，为了区分（也是为了配合GP推荐的要求），需要[分割线](#使用说明##摘要)
 分割线1px
 ② 当标题栏和页面背景不同，不需要分割线
 
-
-
+-----
+#### 透明背景样式
 <div align="left">
 <img src="../images/标题栏/标注9.png" height="300px" alt="图片说明" style="zoom:100%;">
 </div>
 
-#### 透明背景样式
 
-① ② ③ 在深色背景下的标题栏，容器背景为透明，
+[透明背景样式](#使用说明##摘要),① ② ③ 在深色背景下的标题栏，容器背景为透明，
 前景的左侧按钮、标题、右侧文字按钮、
 右侧图标按钮都需要投影，避免和背景没有区分开
 投影参数：向下1dp，大小2dp，颜色20%Black
@@ -199,19 +200,11 @@
 
 ##### <font color='#FF4545'> PS：滑动屏幕时，需要切换到非透明背景的标题栏</font>
 
-
-
-
-
-------
+-----
 
 设计稿地址：[UI设计稿](https://www.figma.com/file/aagp881WpGyQ211QfFHR1k/MangaToon-Libraries-(New)?node-id=8208%3A53136)
 
 ------
-
-
-
-
 
 
 
@@ -251,20 +244,23 @@
 
 ### 属性
 
-| 属性          | 类型    | 作用               | 默认值     |
-| ------------- | ------- | ------------------ | ---------- |
-| navColorStyle | enum    | 导航栏风格         | defaultNav |
-| withBack      | boolean | 是否显示back按钮   | false      |
-| withNavLine   | boolean | 是否显示底部分割线 | false      |
-| withTitle     | string  | 设置主标题内容     |            |
-| withSubTitle  | string  | 设置副标题内容     |            |
-| withIcon1     | string  | 设置图标1内容      |            |
-| withIcon2     | string  | 设置图标2内容      |            |
-| withAction    | string  | 设置响应性行为文案 |            |
+| 属性          | 类型    | 作用                              | 默认值     |
+| ------------- | ------- | --------------------------------- | ---------- |
+| navColorStyle | enum    | [透明背景样式](#设计##标注)        | defaultNav |
+| withBack      | boolean | [左侧导航](#设计##标注)           | false      |
+| withNavLine   | boolean | [分割线](#设计##标注)             | false      |
+| withTitle     | string  | [设置主标题内容](#设计##标注)     |            |
+| withSubTitle  | string  | [设置副标题内容](#设计##标注)     |            |
+| withIcon1     | string  | [右侧图标按钮1](#设计##标注)      |            |
+| withIcon2     | string  | [右侧图标按钮2](#设计##标注)      |            |
+| withAction    | string  | [设置响应性行为文案](#设计##标注) |            |
 
 ### api
 
-#### `initText`
+* `initText(view: ThemeTextView, id: Int = 0, text: CharSequence?)`  设置满足当前主题风格的文本
+  * `view`需要设置的TextView
+  * `id` 字符串id(可选)
+  * `text`字符串内容(可选)
 
 ```java
 if (baseNavBar != null) {
@@ -272,11 +268,8 @@ if (baseNavBar != null) {
 }
 ```
 
-initText方法保证了在对TextView设置文本时,会根据不同主题设置对应的主题颜色.
-
-#### `forceSpecialColor`
-
-允许改变整个标题栏文本内容的颜色,不再跟随app颜色模式变化.
+* `forceSpecialColor(color: Int)` 允许改变整个标题栏文本内容的颜色,不再跟随app颜色模式变化.
+  * `view`color索引id
 
 ```java
 baseNavBar.forceSpecialColor(getResources().getColor(R.color.mt_white));
@@ -298,67 +291,25 @@ baseNavBar.forceSpecialColor(getResources().getColor(R.color.mt_white));
   app:withIcon2="@string/icon_help" />
 ```
 
-<div align="center">
-<img src="../images/标题栏-粉丝排行榜.jpg" height="200px" alt="图片说明" style="zoom:100%;" >
+<div align="left">
+<img src="../images/标题栏/标题栏-粉丝排行榜.jpg" height="200px" alt="图片说明" style="zoom:100%;" >
 </div>
 
-+ widget-example
 
-  demo代码里展示了不同颜色模式下的布局及UI效果:
++ 标题栏-我的
+
+  首页(我的)使用了两个图标按钮,图标按钮可以支持角标提示.
 
 ```xml
 <mobi.mangatoon.widget.nav.NavBarWrapper
-  android:id="@+id/baseNavBar"
+  android:id="@+id/navbarWrapper"
   android:layout_width="match_parent"
-  android:layout_height="wrap_content"
-  app:withBack="true"
-  app:withTitle="默认"
-  app:withIcon2="@string/icon_setting"
-  app:withIcon1="@string/icon_search"
-  app:withSubTitle="subtitle"
-  app:withNavLine="true"
-  app:layout_constraintTop_toTopOf="parent" />
-
-<mobi.mangatoon.widget.nav.NavBarWrapper
-  android:id="@+id/baseNavBar2"
-  android:layout_width="match_parent"
-  android:layout_height="wrap_content"
-  app:withBack="true"
-  app:withTitle="浅色"
-  app:withIcon2="@string/icon_setting"
+  android:layout_height="45dp"
   app:withIcon1="@string/icon_msg_notice"
-  app:withSubTitle="subtitle"
-  app:navColorStyle="whiteNav"
-  app:layout_constraintTop_toBottomOf="@+id/baseNavBar"
-  android:background="@color/mt_black"
-  android:layout_marginTop="10dp"
-  app:withNavLine="true" />
-
-<mobi.mangatoon.widget.nav.NavBarWrapper
-  android:id="@+id/baseNavBar3"
-  android:layout_width="match_parent"
-  android:layout_height="wrap_content"
-  app:withBack="true"
-  app:withTitle="深色"
-  app:withIcon2="@string/icon_setting"
-  app:withIcon1="@string/icon_share"
-  app:withSubTitle="subtitle"
-  app:navColorStyle="darkNav"
-  android:background="@color/mt_white"
-  app:layout_constraintTop_toBottomOf="@+id/baseNavBar2"
-  android:layout_marginTop="10dp"
-  app:withNavLine="true" />
+  app:withIcon2="@string/icon_setting2"
+  android:layout_marginBottom="5dp" />
 ```
 
-```java
-((NavBarWrapper) findViewById(R.id.baseNavBar)).getNavIcon1().setDotViewType(DotView.TYPE_NUMBER);
-((NavBarWrapper) findViewById(R.id.baseNavBar)).getNavIcon1().updateDotView(1);
-
-((NavBarWrapper) findViewById(R.id.baseNavBar2)).getNavIcon1().setDotViewType(DotView.TYPE_NUMBER);((NavBarWrapper) findViewById(R.id.baseNavBar2)).getNavIcon1().updateDotView(110);
-
-((NavBarWrapper) findViewById(R.id.baseNavBar3)).getNavIcon2().setDotViewType(DotView.TYPE_DOT);((NavBarWrapper) findViewById(R.id.baseNavBar3)).getNavIcon2().updateDotView(true);
-```
-
-<div align="center">
-<img src="../images/标题栏.png" height="200px" alt="图片说明" style="zoom:100%;" >
+<div align="left">
+<img src="../images/标题栏/标题栏-我的.jpg" height="200px" alt="图片说明" style="zoom:100%;" >
 </div>
